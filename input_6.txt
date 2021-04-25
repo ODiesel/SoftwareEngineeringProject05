@@ -1,0 +1,11 @@
+c "Druid Test"
+c "Druid will be created along with a goblin"
+
+s p d 15
+s e 3
+
+p a 
+
+a 15 3 transform
+
+p a 
