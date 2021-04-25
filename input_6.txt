@@ -1,11 +1,18 @@
-c "Druid Test"
-c "Druid will be created along with a goblin"
+c Druid Test
+c Druid will be created along with a goblin
+c They will duel to the death
+c Druid will loot the goblin
 
 s p d 15
-s e 3
+s e 2
 
 p a 
 
-a 15 3 transform
+a 15 2 cat_scratch
+a 2 15 weapon_attack
+
+p a 
+
+a 15 2 bear_claw
 
 p a 

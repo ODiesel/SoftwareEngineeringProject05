@@ -9,14 +9,16 @@ Druid::Druid(JsonEntityBuilder &builder, JsonItemBuilder & inventory, uint32_t u
 
 
 
-void Druid::Transform(Entity *target)
+void Druid::CatScratch(Entity *target)
 {
-    Attack(target, GetIntelligence() * 1.5, "Transform");
+    Attack(target, GetIntelligence() * 0.5, "Cat Scratch");
+    Attack(target, GetIntelligence() * 0.5, "Cat Scratch");
+    Attack(target, GetIntelligence() * 0.5, "Cat Scratch");
 }
 
-void Druid::AnimalAttack(Entity *target)
+void Druid::BearClaw(Entity *target)
 {
-    Attack(target, GetIntelligence() * 0.5, "Animal Attack");
+    Attack(target, GetIntelligence() * 2, "Bear Claw");
 }
 
 void Druid::OutputStatus() const
@@ -41,14 +43,14 @@ void Druid::UseAction(Entity * target, const std::string& spellName, const std::
         WeaponAttack(target);
         return;
     }
-    if(spellName == "transform")
+    if(spellName == "cat_scratch")
     {
-        Transform(target);
+        CatScratch(target);
         return;
     }
-    if(spellName == "animal_attack")
+    if(spellName == "bear_claw")
     {
-        AnimalAttack(target);
+        BearClaw(target);
         return;
     }
     errorFindingAbility(spellName);

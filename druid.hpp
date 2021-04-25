@@ -8,8 +8,8 @@
 class Druid : public Entity
 {
 private:
-    void Transform(Entity * target);
-    void AnimalAttack(Entity * target);
+    void CatScratch(Entity * target);
+    void BearClaw(Entity * target);
 
 public:
 
