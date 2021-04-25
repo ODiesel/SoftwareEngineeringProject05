@@ -1,0 +1,48 @@
+""Druid Test""
+""Druid will be created along with a goblin""
+""They will duel to the death""
+""Druid will loot the goblin""
+Norfir the druid has entered the battle
+Hobgoblin the monster has entered the battle
+Goblin: Hobgoblin
+        Current HP: 25
+        HIDDEN INVENTORY
+--------------------------------
+Druid: Norfir
+        Current HP: 10
+        Intelligence: 17
+Norfir uses Cat Scratch on target Hobgoblin dealing 8 damage.
+Norfir uses Cat Scratch on target Hobgoblin dealing 8 damage.
+Norfir uses Cat Scratch on target Hobgoblin dealing 8 damage.
+Hobgoblin uses WeaponAttack on target Norfir dealing 6 damage.
+Goblin: Hobgoblin
+        Current HP: 1
+        HIDDEN INVENTORY
+--------------------------------
+Druid: Norfir
+        Current HP: 4
+        Intelligence: 17
+Norfir uses Bear Claw on target Hobgoblin dealing 34 damage.
+Hobgoblin dies
+Druid: Norfir
+        Current HP: 4
+        Intelligence: 17
+[Sword of a Thousand Truths]: 
+        Type : sword
+        Armor: 0
+        Damage: 20
+
+[Nameless Chest Armor]: 
+        Type : chest
+        Armor: 10
+        Damage: 0
+
+[Duskblade of Draktharr]: 
+        Type : sword
+        Armor: 0
+        Damage: 14
+
+[Riftmaker]: 
+        Type : staff
+        Armor: 0
+        Damage: 4
