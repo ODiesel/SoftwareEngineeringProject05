@@ -11,3 +11,6 @@ I plan to add another hero class for a Druid
 5) I will need to update the makefile to include the new class
 ^^^^^^^^^^ DONE ^^^^^^^^^^
 6) I will need to change checkall.bash to include the new input_6.txt file
+^^^^^^^^^^ DONE ^^^^^^^^^^
+7) I will need to create an output_6.txt for checkall.bash to compare against
+^^^^^^^^^^ DONE ^^^^^^^^^^

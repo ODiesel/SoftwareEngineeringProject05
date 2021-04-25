@@ -49,6 +49,7 @@ checkAll(){
         valgrind --leak-check=full --log-file="valgrind_3.txt" $projectName ./input_3.txt > out3.txt
         valgrind --leak-check=full --log-file="valgrind_4.txt" $projectName ./input_4.txt > out4.txt
         valgrind --leak-check=full --log-file="valgrind_5.txt" $projectName ./input_5.txt > out5.txt
+        valgrind --leak-check=full --log-file="valgrind_6.txt" $projectName ./input_6.txt > out6.txt
 
 
         sdiff -bBWs output_1.txt out1.txt > tmp1.txt
@@ -56,6 +57,7 @@ checkAll(){
         sdiff -bBWs output_3.txt out3.txt > tmp3.txt
         sdiff -bBWs output_4.txt out4.txt > tmp4.txt
         sdiff -bBWs output_5.txt out5.txt > tmp5.txt
+        sdiff -bBWs output_6.txt out6.txt > tmp6.txt
 
         echo "Checking your output files"
         _test_file="tmp1.txt"
@@ -88,6 +90,12 @@ checkAll(){
         # dispValgrind
         checkOutput
 
+        _test_file="tmp6.txt"
+        _project_file="Output 6"
+        _valgrindFile="valgrind_6.txt"
+        # dispValgrind
+        checkOutput
+
         # _test_file="tmp5.txt"
         # _project_file="Output 5"
         # checkOutput
@@ -101,13 +109,14 @@ checkAll(){
         rm tmp3.txt out3.txt 
         rm tmp4.txt out4.txt 
         rm tmp5.txt out5.txt 
+        rm tmp6.txt out6.txt 
 }
 
 checkOne()
 {
         echo "Testing $1"
-        if [[ $1 > 5 ]] ; then
-                echo "provided a value out of range, please select 1-4"
+        if [[ $1 > 6 ]] ; then
+                echo "provided a value out of range, please select 1-6"
                 echo "provided: $1"
                 exit 0
         fi
@@ -121,7 +130,7 @@ checkOne()
         # valgrind --leak-check=full --log-file="valgrind_1.txt" $projectName ./input_1.txt > out1.txt
         _projectFile="./input_$1.txt"
         _outfile="out$1.txt"
-        _checkFile="output$1.txt"
+        _checkFile="output_$1.txt"
         _tmpFile="tmp$1.txt"
         _vgFile="valgrind_$1.txt"
         _vgCheckFile="m_valgrind_$1.txt"
